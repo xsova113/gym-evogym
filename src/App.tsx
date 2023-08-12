@@ -22,7 +22,7 @@ function App() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [setSelectedPage]);
 
   return (
     <div className="bg-gray-20 app">

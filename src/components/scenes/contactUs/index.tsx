@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import ContactusPageGraphic from "@/assets/ContactUsPageGraphic.png";
 import HText from "@/components/shared/HText";
+import { FormEvent } from "react";
 
 const ContactUs = () => {
   const { setSelectedPage } = useSelectePageStore();
@@ -20,7 +21,7 @@ const ContactUs = () => {
     },
   });
 
-  const onSubmit = async (e: any) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     const isValid = await trigger();
     if (!isValid) {
       e.preventDefault();
